@@ -3,6 +3,7 @@ package main
 import (
 	"bytes"
 	"encoding/json"
+	"fmt"
 	"net/http"
 	"os"
 
@@ -17,6 +18,7 @@ type Message struct {
 
 func main() {
 	hookUrl := os.Getenv("DISCORD_URL")
+	fmt.Println(hookUrl)
 
 	//Zerolog setup
 	logFile, err := os.OpenFile(
